@@ -56,7 +56,7 @@ model = dict(
         ],
         num_outs=5,
         out_channels=256,
-        type='FPN'),
+        type='ReFPN'),
     roi_head=dict(
         bbox_head=dict(
             bbox_coder=dict(

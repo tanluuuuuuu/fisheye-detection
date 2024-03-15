@@ -32,7 +32,7 @@ model = dict(
         ),
         style='pytorch',
         type='ReResNet',
-        pretrained='work_dirs/pretrain/re_resnet50_c8_batch256-25b16846.pth'),
+        pretrained='/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/pretrained/re_resnet50_c8_batch256-25b16846.pth'),
     data_preprocessor=dict(
         bgr_to_rgb=True,
         mean=[
@@ -56,7 +56,7 @@ model = dict(
         ],
         num_outs=5,
         out_channels=256,
-        type='FPN'),
+        type='ReFPN'),
     roi_head=dict(
         bbox_head=dict(
             bbox_coder=dict(
@@ -336,4 +336,4 @@ visualizer = dict(
     vis_backends=[
         dict(type='LocalVisBackend'),
     ])
-work_dir = './work_dirs/faster-rcnn_reresnet50_12_03_2024'
+work_dir = './work_dirs/faster-rcnn_reresnet50_15_03_2024'
