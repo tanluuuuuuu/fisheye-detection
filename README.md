@@ -37,7 +37,7 @@ pip install -v -e .
 ```
 
 # Result
-| Model | Backbone | AP 0.5-0.95 | AP 0.5 | AP S | AP M | AP L | F1 Score | Config | Download |
+| Model | Backbone | AP_0.5_0.95 | AP_0.5 | AP_S | AP_M | AP_L | F1 | Config | Download |
 | ------ |:-------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | Faster R-CNN| ResNet101+FPN | 0.1655 | 0.2887 | 0.1043 | 0.2219 | 0.3041 | - | [config](https://drive.google.com/file/d/1cKF3iFt67XU_e3wqI9XBW4TqJQsP5osH/view?usp=drive_link) | [model](https://drive.google.com/file/d/1CvPknKVzF9U1ezjQQ_y5z58JdVPLLPLH/view?usp=drive_link) |
 | Faster R-CNN| ReResNet101+ReFPN | - | - | - | - | - | - | - | - |
