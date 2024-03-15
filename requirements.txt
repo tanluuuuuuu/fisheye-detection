@@ -1,3 +1,4 @@
 -r requirements/build.txt
 -r requirements/optional.txt
 -r requirements/runtime.txt
+e2cnn==0.2.3
