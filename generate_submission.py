@@ -3,10 +3,10 @@ import json
 import os
 
 # Initialize the DetInferencer
-CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_r101_fpn_2x_coco_28_02_2024/faster-rcnn_r101_fpn_2x_coco.py"
-WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_r101_fpn_2x_coco_28_02_2024/epoch_20.pth"
-IMAGE_FOLDER_PATH = "/home/luunvt/WORK_DIR/fisheye/data/Fisheye8K_all_including_train&test/train/images"
-OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_r101_fpn_2x_coco_28_02_2024/outputs_train_images/"
+CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/faster-rcnn_reresnet50.py"
+WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/epoch_17.pth"
+IMAGE_FOLDER_PATH = "/home/luunvt/WORK_DIR/fisheye/data/images"
+OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/outputs_test_images/"
 PREDS_JSON_PATH = f'{OUT_DIR}/preds'
 VIS_IMG_PATH = f'{OUT_DIR}/vis'
 FILE_PATH = f'{OUT_DIR}/res.json'
@@ -24,8 +24,8 @@ if __name__ == '__main__':
     '''
     INFERENCE
     '''
-    # inferencer = DetInferencer(model=CONFIG_PATH, weights=WEIGHT_PATH, device='cuda:0')
-    # res = inferencer(IMAGE_FOLDER_PATH, out_dir=OUT_DIR, no_save_pred=False)
+    inferencer = DetInferencer(model=CONFIG_PATH, weights=WEIGHT_PATH, device='cuda:0')
+    res = inferencer(IMAGE_FOLDER_PATH, out_dir=OUT_DIR, no_save_pred=False)
     
     '''
     GENERATE JSON
