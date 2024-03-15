@@ -4,7 +4,7 @@ MMDetection works on Linux, Windows, and macOS. It requires Python 3.7+, CUDA 9.
 1. Download and install Miniconda from the [official website](https://docs.conda.io/en/latest/miniconda.html).
 2. Create a conda environment and activate it.
 ```bash
-conda create --name openmmlab python=3.8 -y
+conda create --name openmmlab python=3.8.18 -y
 conda activate openmmlab
 ```
 3. Install PyTorch following [official instructions](https://pytorch.org/get-started/locally/), e.g.
@@ -23,7 +23,7 @@ conda install pytorch torchvision cpuonly -c pytorch
 ```bash
 pip install -U openmim
 mim install mmengine
-mim install "mmcv>=2.0.0"
+mim install "mmcv==2.1.0"
 ```
 
 5. Install MMDetection.
