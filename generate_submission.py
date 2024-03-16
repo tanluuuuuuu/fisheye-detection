@@ -3,10 +3,10 @@ import json
 import os
 
 # Initialize the DetInferencer
-CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/faster-rcnn_reresnet50.py"
-WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/epoch_17.pth"
+CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/faster-rcnn_reresnet50_v2.py"
+WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/epoch_19.pth"
 IMAGE_FOLDER_PATH = "/home/luunvt/WORK_DIR/fisheye/data/images"
-OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_15_03_2024/outputs_test_images/"
+OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/outputs_test_images/"
 PREDS_JSON_PATH = f'{OUT_DIR}/preds'
 VIS_IMG_PATH = f'{OUT_DIR}/vis'
 FILE_PATH = f'{OUT_DIR}/res.json'

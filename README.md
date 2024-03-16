@@ -40,4 +40,4 @@ pip install -v -e .
 | Model | Backbone | AP_0.5_0.95 | AP_0.5 | AP_S | AP_M | AP_L | F1 | Config | Download |
 | ------ |:-------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|:----------------------:|
 | Faster R-CNN| ResNet101+FPN | 0.1655 | 0.2887 | 0.1043 | 0.2219 | 0.3041 | 0.1962 | [config](https://drive.google.com/file/d/1cKF3iFt67XU_e3wqI9XBW4TqJQsP5osH/view?usp=drive_link) | [model](https://drive.google.com/file/d/1CvPknKVzF9U1ezjQQ_y5z58JdVPLLPLH/view?usp=drive_link) |
-| Faster R-CNN| ReResNet50+ReFPN | 0.2093 | 0.3302 | 0.1065 | 0.3046 | 0.3879 | 0.2222 | [config](https://drive.google.com/file/d/1hZOAyUss7aZ1ZaQpmP7VGXXFrqlR6F9J/view?usp=sharing) | [model](https://drive.google.com/file/d/1mu47U0s4N8P0YpHJhrQ6RCG-K1vnVwNQ/view?usp=sharing) |
+| Faster R-CNN| ReResNet50+ReFPN | 0.2535 | 0.3788 | 0.1368 | 0.3726 | 0.4097 | 0.3623 | [config](https://drive.google.com/file/d/1QVu-niO-ZNFiEb6_iTxJW0DCk1seLm2c/view?usp=sharing) | [model](https://drive.google.com/file/d/1fNyYheY9ALldg1-uFIoaLIIp2CoRr2qU/view?usp=sharing) |

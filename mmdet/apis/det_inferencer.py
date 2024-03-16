@@ -111,7 +111,6 @@ class DetInferencer(BaseInferencer):
             checkpoint (dict, optional): The loaded checkpoint.
             cfg (Config or ConfigDict, optional): The loaded config.
         """
-
         if checkpoint is not None:
             _load_checkpoint_to_model(model, checkpoint)
             checkpoint_meta = checkpoint.get('meta', {})
