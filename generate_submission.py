@@ -3,10 +3,10 @@ import json
 import os
 
 # Initialize the DetInferencer
-CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/retinanet_r101_fpn_2x_16_03_2024/retinanet_r101_fpn_2x.py"
-WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/retinanet_r101_fpn_2x_16_03_2024/epoch_17.pth"
+CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/faster-rcnn_reresnet50_v2.py"
+WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/epoch_19.pth"
 IMAGE_FOLDER_PATH = "/home/luunvt/WORK_DIR/fisheye/data/images"
-OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/retinanet_r101_fpn_2x_16_03_2024/outputs_test_images/"
+OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/infer_test_v2_18_03_2024/"
 PREDS_JSON_PATH = f'{OUT_DIR}/preds'
 VIS_IMG_PATH = f'{OUT_DIR}/vis'
 FILE_PATH = f'{OUT_DIR}/res.json'
@@ -45,15 +45,18 @@ if __name__ == '__main__':
         bboxes = data['bboxes']
 
         for lb, sc, bb in zip(labels, scores, bboxes):
-            if (sc < 0.7): continue
-            x_top_left, y_top_left, x_bot_right, y_bot_right = bb
+            if (sc < 0.5): continue
+            min_x, min_y, max_x, max_y = bb
             tmp_dict = {
                 "image_id": img_id,
                 "category_id": lb,
                 # Convert format 
-                #    [x_top_left, y_top_left, x_bottom_right, y_bottom_right] 
+                #    [min_x, min_y, max_x, max_y] 
                 # to [x_top_left, y_top_left, w, h]
-                "bbox": [x_top_left, y_top_left, x_bot_right-x_top_left, y_bot_right-y_top_left],
+                "bbox": [min_x, 
+                         min_y, 
+                         (max_x - min_x), 
+                         (max_y - min_y)],
                 "score": sc
             }
             final_results.append(tmp_dict)
