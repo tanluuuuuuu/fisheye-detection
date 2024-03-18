@@ -2,11 +2,10 @@ from mmdet.apis import DetInferencer
 import json 
 import os
 
-# Initialize the DetInferencer
 CONFIG_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/faster-rcnn_reresnet50_v2.py"
 WEIGHT_PATH = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/epoch_19.pth"
 IMAGE_FOLDER_PATH = "/home/luunvt/WORK_DIR/fisheye/data/images"
-OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v2_15_03_2024/infer_test_v2_18_03_2024/"
+OUT_DIR = "/home/luunvt/WORK_DIR/fisheye/src/mmdetection/work_dirs/faster-rcnn_reresnet50_v3_15_03_2024/infer_test_v2_18_03_2024/"
 PREDS_JSON_PATH = f'{OUT_DIR}/preds'
 VIS_IMG_PATH = f'{OUT_DIR}/vis'
 FILE_PATH = f'{OUT_DIR}/res.json'
@@ -45,7 +44,7 @@ if __name__ == '__main__':
         bboxes = data['bboxes']
 
         for lb, sc, bb in zip(labels, scores, bboxes):
-            if (sc < 0.5): continue
+            # if (sc < 0.5): continue
             min_x, min_y, max_x, max_y = bb
             tmp_dict = {
                 "image_id": img_id,
