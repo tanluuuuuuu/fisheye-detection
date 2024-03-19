@@ -4,7 +4,7 @@ data_root = '/home/luunvt/WORK_DIR/fisheye/data/Fisheye8K_all_including_train&te
 dataset_type = 'CocoDataset'
 classes = ('Bus', 'Bike', 'Car', 'Pedestrian', 'Truck')
 default_hooks = dict(
-    checkpoint=dict(interval=1, type='CheckpointHook'),
+    checkpoint=dict(interval=1, max_keep_ckpts=2, save_best='auto', type='CheckpointHook'),
     logger=dict(interval=50, type='LoggerHook'),
     param_scheduler=dict(type='ParamSchedulerHook'),
     sampler_seed=dict(type='DistSamplerSeedHook'),
